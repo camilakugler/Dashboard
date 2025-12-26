@@ -31,5 +31,3 @@ Abra no navegador: `http://localhost:8501`
 - Para grandes arquivos de dados, considere usar Git LFS.
 
 ---
-
-Se quiser, posso adicionar instruções extra (como como usar `git lfs`) ou um arquivo `requirements.txt` gerado automaticamente. Diga se quer que eu adicione isso.
