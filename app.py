@@ -1,17 +1,6 @@
 import pandas as pd
 import plotly.express as px
 import streamlit as st
-import time
-
-# Compatibility: define experimental_rerun fallback for Streamlit versions without it
-if not hasattr(st, "experimental_rerun"):
-    def experimental_rerun():
-        # Fallback: update query params to force a rerun when possible
-        try:
-            st.experimental_set_query_params(_rerun=str(time.time()))
-        except Exception:
-            pass
-    st.experimental_rerun = experimental_rerun
 
 # Load the data
 car_data = pd.read_csv('vehicles.csv')
@@ -107,3 +96,4 @@ scatter_checkbox = st.checkbox("Exibir gráfico de dispersão Odometer vs Price"
 if scatter_checkbox:
     fig_scatter = px.scatter(car_data, x="odometer", y="price", title="Scatter Plot: Odometer vs Price")
     st.plotly_chart(fig_scatter, use_container_width=True)
+    
