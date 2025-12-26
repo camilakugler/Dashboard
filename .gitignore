@@ -1,2 +1,18 @@
-# Created by venv; see https://docs.python.org/3/library/venv.html
-*
+# Ignore common Python and editor files
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environment
+.venv/
+
+# Editor/IDE
+.vscode/
+.idea/
+
+# Optional: ignore CSV data files (uncomment if you don't want to track large data files)
+# *.csv
+
+# Environment files
+.env
+
